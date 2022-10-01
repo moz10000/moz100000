@@ -65,7 +65,7 @@ $(document).ready(function(){
     classReplacementInitial()
     clearTimeout(setTimeoutId);
     elapsedTime = 10
-    $("#time").text("00:00:00");
+    $("#time").text("00:00:00:00");
   })
 
 })
