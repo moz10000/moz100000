@@ -1,0 +1,30 @@
+#time {
+  width: 280px;
+  font-size: 40px;
+  border: 10px ridge rgb(141, 140, 140);
+  text-align: center;
+  margin-bottom: 10px;
+
+}
+
+#buttons {
+  width: 300px;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.button {
+  width: 100%;
+  background-color: gainsboro;
+  border-radius: 50px;
+  box-shadow: 0 3px rgb(66, 66, 66);
+}
+
+.button:active {
+  position: relative;
+  top: 3px;
+  box-shadow: none;
+
+
+}
