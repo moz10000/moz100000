@@ -9,7 +9,7 @@
 
 .display {
   width: 400px;
-  height: 100px;
+  height: 50px;
   font-size: 30px;
   background-color: black;
   color: aliceblue;
@@ -40,4 +40,8 @@ button {
   font-size: 25px;
   width: 23%;
   height: 18%;
+}
+
+#ac, #eq {
+  width: 47.5%;
 }

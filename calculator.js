@@ -47,9 +47,13 @@ numbtn.click(function(){
   if(dis.text() == '0'){ //ディスプレイが0の時に数字を押すとディスプレイを空にする処理
     dis.text('');
   }
+  if(opeflg == true) {
+    dis.text('');
+    opeflg = false;
+  }
   let moji = $(this).text();
   output(moji);
-  opeflg = false;
+  console.log(number1);
 });
 
 //「小数点ボタン」処理
@@ -58,6 +62,10 @@ dec.click(function(){
     if(second == true) {
       allclear();
       second = false;
+    }
+    if(opeflg == true) {
+      dis.text('');
+      opeflg = false;
     }
     let moji = $(this).text();
     output(moji);
@@ -77,7 +85,8 @@ zero.click(function(){
     allclear();
     second = false;
   }
-  if(dis.text() == ''){
+  if(dis.text() == '' || opeflg == true){
+    dis.text('');
     let moji = $(this).text();
     output(moji);
     opeflg = false;
@@ -94,7 +103,8 @@ dbzero.click(function(){
     allclear();
     second = false;
   }
-  if(dis.text() == ''){
+  if(dis.text() == '' || opeflg == true){
+    dis.text('');
     let moji = 0;
     output(moji);
     opeflg = false;
@@ -138,6 +148,7 @@ mul.click(function(){
     calc = 3;
     second = decflg = false;
     opeflg = true;
+    console.log(number1);
   }
 });
 
@@ -156,6 +167,7 @@ divi.click(function(){
 //「＝ボタン」処理のswitch構文
 eq.click(function(){
   number2 = dis.text();
+  console.log(number2);
   switch(calc){
     case 1:
       result = Number(number1) + Number(number2);
